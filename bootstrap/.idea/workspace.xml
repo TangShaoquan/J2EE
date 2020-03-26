@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfa3663c-1697-4f38-86ac-72992210a6e1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Y6du4G3CzmYCyuiUuBugtR2PWb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java程序\bootstrap" />
+      <recent name="E:\Java程序\bootstrap\js" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfa3663c-1697-4f38-86ac-72992210a6e1" name="Default Changelist" comment="" />
+      <created>1582267196422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582267196422</updated>
+      <workItem from="1582267200049" duration="6378000" />
+      <workItem from="1582372607055" duration="1283000" />
+      <workItem from="1582553637047" duration="456000" />
+      <workItem from="1582554257808" duration="4800000" />
+      <workItem from="1582625568071" duration="2021000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="182" key="#HTTP_Proxy" timestamp="1582553840950">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="182" key="#HTTP_Proxy/0.0.1536.864@0.0.1536.864" timestamp="1582553840950" />
+    <state x="727" y="180" key="FileChooserDialogImpl" timestamp="1582554048935">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="727" y="180" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1582554048935" />
+    <state x="725" y="54" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582271295676">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="725" y="54" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1582271295676" />
+    <state x="245" y="26" key="new project wizard" timestamp="1582554050746">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="245" y="26" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1582554050746" />
+  </component>
+</project>
