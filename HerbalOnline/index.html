@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>修合中药材在线交易网站————专业的中药交易平台</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="layui/css/layui.css"></script>
+
+    <style type="text/css">
+        @media print {
+            #printHidden{
+                display: none;
+            }
+        }
+        input{
+            outline:none;
+            border:none;
+        }
+        .clear{
+            clear:both;
+        }
+        .search{
+            width:500px;
+            height:80px;
+            margin-top:8px;
+        }
+        .search-main{
+            width:500px;
+            height:80px;
+        }
+        .search-nav a{
+            display:inline-block;
+            width:70px;
+            height:25px;
+            text-align:center;
+            line-height:25px;
+        }
+        .search-nav a:hover{
+            background-color:#f9e6e6;
+        }
+        .search-nav .goods{
+            background-color: #9ac94c;
+            color:#fff;
+            font-weight:bold;
+        }
+        .search-nav .goods:hover{
+            background-color:#ff5400;
+        }
+        .search-nav .tmall, .search-nav .shop{
+            margin-left:-6px;
+        }
+        .search-box{
+            width:500px;
+            height:20px;
+            float:left;
+        }
+        .search-box form{
+            position:relative;
+            width:400px;
+            height:10px;
+        }
+        .search-text{
+            border:2px solid #9ac94c;
+            height:40px;
+            width:490px;
+        }
+        .search-text input{
+            padding:8px 8px 8px 22px;
+            overflow:hidden;
+            width:470px;
+        }
+        .search-tmall-text{
+            border:2px solid #c60000;
+        }
+        .search-btn{
+            position:absolute;
+            left:400px;
+            top:0px;
+            width:80px;
+            height:30px;
+            background-color:#9ac94c;
+        }
+        .search-btn input{
+            background-color:#9ac94c;
+            width:100px;
+            height:40px;
+            font-size:15px;
+            color:#fff;
+            font-weight:bold;
+        }
+        .search-tmall-btn input{
+            background-color:#9ac94c;
+        }
+        .search-top{
+            position:absolute;
+            left: 530px;
+            top: 35px;
+            margin-top: 0px;
+            width:30px;
+            height:30px;
+        }
+    </style>
+    <style>
+        .TopBar{
+            padding-top: 3px;
+            margin-left: 0px;
+            margin-right: 0px;
+            background-color: #F5F5F5;
+        }
+        .TopBarDiv{
+            padding: 0px;
+        }
+        .like{
+            color:#ccc;
+            cursor:pointer;
+        }
+        .cs{color:#f00;}
+        a:link{
+            color: black;
+            text-decoration: none;
+        }
+        .logo{
+            width: 220px;
+            height: 100px;
+        }
+        .Search{
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+        .yzdiv{
+            margin-top: 33px;
+            padding-left: 0px;
+            padding-left: 0px;
+        }
+        .yzpng{
+            width: 110px;
+        }
+        .gd{
+            margin-top: 35px;
+            margin-left: 0px;
+        }
+        .phonenumber{
+            font-size:18px;
+        }
+        .mn{
+            font:20px/47px "微软雅黑";
+        }
+        .icon_arrow:before {
+            content: '';
+            display: inline-block;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid white;/*箭头指向左 上下为透明 写的相反 后为颜色*/
+            top: 0%;
+            right: 0px;
+        }
+        .bottom{
+            padding: 0px;
+        }
+        .ygdiv{
+            width: 150px;
+            height: 150px;
+        }
+        .ygpng{
+            height: 130px;
+        }
+        .Conbody{
+            margin-top: 5px;
+            padding: 5px;
+        }
+        .sale{
+            background-image: linear-gradient(to right , #ccffcc, #ccffff);
+        }
+        .square{
+            width: 5px;
+            height: 5px;
+            background:red;
+            white-space:nowrap;
+        }
+        .jx{
+            border-bottom: 2px solid lightsalmon;
+            padding: 5px;
+        }
+    </style>
+
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script typet="text/javascript" src="layui/layui.js"></script>
+    <script>
+        $(function () {
+            $(".like").click(function () {
+                $(this).toggleClass('cs');
+            })
+        })
+        layui.use('element', function(){
+            var element = layui.element;
+            element.on('tab(demo)', function(data){
+                console.log(data);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        window.onload=function(){
+            var as = document.getElementById("search-nav").getElementsByTagName("a");
+            var panels = document.getElementById("search-text-panel").getElementsByTagName("div");
+            var btns = document.getElementById("search-btn-panel").getElementsByTagName("div");
+            for(var i=0;i<3;i++){
+                as[i].id=i;
+                as[i].onclick = function(){
+                    for(var j=0;j<3;j++){
+                        as[j].className = "";
+                        panels[j].style.display="none";
+                        btns[j].style.display="none";
+                    }
+                    as[1].style.background="#fff";
+                    if(this.id==0 || this.id==2){
+                        this.className = "goods";
+                    }else{
+                        this.className = "goods";
+                        this.style.background="#c60000";
+                    }
+
+                    panels[this.id].style.display="block";
+                    btns[this.id].style.display="block";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--1.页眉-->
+    <header class="container-fluid TopBarDiv">
+        <!--顶部菜单-->
+        <div class="TopBar">
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-12 col-sm-8">
+                        <div class="col-md-1">中国大陆</div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">亲,请登录</a></div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">免费注册</a></div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">修合App</a></div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </td>
+                                    <td>
+                                        <a href = "javascriot:void(0)">购物车</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-1">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="like">&#10084;</div>
+                                    </td>
+                                    <td>
+                                        <a href = "javascriot:void(0)">收藏夹</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">商品分类</a></div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">卖家入驻</a></div>
+                        <div class="col-md-1"><a href = "javascriot:void(0)">联系客服</a></div>
+                        <div class="col-md-1">
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-align-justify"></span>
+                                    </td>
+                                    <td>
+                                        <a href = "javascriot:void(0)">导航  </a><span class="icon_arrow"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//搜索框-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="logo img-responsive" src="img/logo.png">
+                </div>
+                <div class="col-md-6 Search">
+                    <div class="search">
+                        <div class="search-main">
+                            <div class="search-nav" id="search-nav">
+                                <a href="#" class="goods">中草药</a>
+                                <a href="#" class="tmall newred">金牌商家</a>
+                                <a href="#" class="shop">供应商</a>
+                            </div>
+
+                            <div class="search-box" id="search-box">
+                                <form>
+                                    <div class="search-text-panel" id="search-text-panel">
+
+                                        <div class="search-text" id="search-text" style="display:block">
+                                            <input type="text" placeholder="搜索中草药……"/>
+                                        </div>
+
+                                        <div class="search-text search-tmall-text" id="search-text" style="display:none">
+                                            <input type="text" placeholder="搜索金牌商家……"/>
+                                        </div>
+
+                                        <div class="search-text" id="search-text" style="display:none">
+                                            <input type="text" placeholder="搜索供应商……"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="search-btn-panel" id="search-btn-panel">
+                                        <div class="search-btn" id="searchBtn" style="display:block;background-color: #9ac94c">
+                                            <input type="submit" value="搜索"/>
+                                        </div>
+
+                                        <div class="search-btn search-tmall-btn" id="searchBtn" style="display:none;background-color: #9ac94c">
+                                            <input type="submit" value="搜索"/>
+                                        </div>
+
+                                        <div class="search-btn" id="searchBtn" style="display:none;background-color: #9ac94c">
+                                            <input type="submit" value="搜索"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="search-top">
+                                <a href="#">高级<br/>搜索</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 yzdiv">
+                    <img  class="yzpng" src="img/yz.png">
+                </div>
+                <div class="col-md-2 gd">
+                    <table>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-earphone"></span>广告服务</td>
+                        </tr>
+                        <tr>
+                            <td><span class="phonenumber">188-9009-5920</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--//导航栏-->
+        <div class="row mn" style="background-color: #86bf43">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1 mn1"><a href="#" style="color: white">门户首页</a></div>
+            <div class="col-md-1 mn2">
+                <a href="#" style="color: white">行情资讯</a>
+                <span class="icon_arrow"></span>
+            </div>
+            <div class="col-md-1 mn3"><a href="#" style="color: white">商家入驻</a></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1 mn5"><a href="#" style="color: white">扶贫板块</a></div>
+            <div class="col-md-1 mn6"><a href="#" style="color: white">优惠质检</a></div>
+            <div class="col-md-1 mn7"><a href="#" style="color: white">科普辟谣  </a><span class="icon_arrow"></span></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+        </div>
+    </header>
+    <!--2.主体-->
+    <div class="container Conbody">
+        <!--中药材植株预购-->
+        <div class="row" style="padding: 0px">
+            <div class="col-md-2 ygdiv">
+                <img src="img/yg.png" class="img-thumbnail ygpng">
+            </div>
+            <div class="col-md-9 sale">
+                <table class="table table-hover" style="align-content: center;valign: middle">
+                    <tr>
+                        <td>中药植株预购业务介绍</td>
+                        <td>2020年-2月-14日</td>
+                        <td>点击查看></td>
+                    </tr>
+                    <tr>
+                        <td>xxx中药待售</td>
+                        <td>2020年-2月-14日</td>
+                        <td>点击查看></td>
+                    </tr>
+                    <tr>
+                        <td>xxx中药待售</td>
+                        <td>2020年-2月-14日</td>
+                        <td>点击查看></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-1" style="text-align: center">
+                <img src="img/see.png" style="width: 103px; height: 100px">
+                <!-- Contextual button for informational alert messages -->
+                <button type="button" class="btn btn-info">查看更多文章</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" >
+                <tab>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;中药材品种
+                        </td>
+                    </tr>
+                </tab>
+                <ol class="breadcrumb" style="text-align: center">
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">B</a></li>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">D</a></li>
+                    <li><a href="#">E</a></li>
+                    <li><a href="#">F</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#">G</a></li>
+                    <li><a href="#">H</a></li>
+                    <li><a href="#">I</a></li>
+                    <li><a href="#">J</a></li>
+                    <li><a href="#">K</a></li>
+                    <li><a href="#">L</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#">M</a></li>
+                    <li><a href="#">N</a></li>
+                    <li><a href="#">O</a></li>
+                    <li><a href="#">P</a></li>
+                    <li><a href="#">Q</a></li>
+                    <li><a href="#">R</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#">S</a></li>
+                    <li><a href="#">T</a></li>
+                    <li><a href="#">U</a></li>
+                    <li><a href="#">V</a></li>
+                    <li><a href="#">W</a></li>
+                    <li><a href="#">X</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#">Y</a></li>
+                    <li><a href="#">Z</a></li>
+                </ol>
+                <tab>
+                    <tr>
+                        <td>
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;产地直达
+                        </td>
+                    </tr>
+                </tab>
+                <ol class="breadcrumb" style="text-align: left">
+                    <li><a href="#">华北</a></li>
+                    <li class="active">北京市</li>
+                    <li class="active">天津市</li>
+                    <li class="active">河北省</li>
+                    <li class="active">山西省</li>
+                    <li class="active">内蒙古</li>
+                    <br>
+                    <br>
+                    <li><a href="#">东北</a></li>
+                    <li class="active">辽宁省</li>
+                    <li class="active">吉林省</li>
+                    <li class="active">黑龙江省</li>
+                    <br>
+                    <br>
+                    <li><a href="#">华北</a></li>
+                    <li class="active">上海市</li>
+                    <li class="active">江苏省</li>
+                    <li class="active">浙江省</li>
+                    <li class="active">安徽省</li>
+                    <li class="active">福建省</li>
+                    <li class="active">江西省</li>
+                    <li class="active">山东省</li>
+                    <br>
+                    <br>
+                    <li><a href="#">中南</a></li>
+                    <li class="active">河南省</li>
+                    <li class="active">湖北省</li>
+                    <li class="active">湖南省</li>
+                    <li class="active">广东省</li>
+                    <li class="active">广西</li>
+                    <li class="active">海南</li>
+                    <br>
+                    <br>
+                    <li><a href="#">西南</a></li>
+                    <li class="active">重庆市</li>
+                    <li class="active">四川省</li>
+                    <li class="active">贵州省</li>
+                    <li class="active">云南省</li>
+                    <li class="active">西藏</li>
+                    <br>
+                    <br>
+                    <li><a href="#">西北</a></li>
+                    <li class="active">陕西省</li>
+                    <li class="active">甘肃省</li>
+                    <li class="active">青海省</li>
+                    <li class="active">宁夏</li>
+                    <li class="active">新疆维吾尔自治区</li>
+                </ol>
+                <!--求购-->
+                <div>
+                    <table class="table table-hover">
+                        <th>
+                            <td><span class="glyphicon glyphicon-search">求购</span></td>
+                            <td>更多>></td>
+                            <td></td>
+                        </th>
+                        <tr>
+                            <td>
+                                薄荷
+                            </td>
+                            <td>
+                                统货
+                            </td>
+                            <td>
+                                李**
+                            </td>
+                            <td>
+                                会员可见
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                三七
+                            </td>
+                            <td>
+                                100头
+                            </td>
+                            <td>
+                                王**
+                            </td>
+                            <td>
+                                会员可见
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                石斛
+                            </td>
+                            <td>
+                                鲜货
+                            </td>
+                            <td>
+                                孙**
+                            </td>
+                            <td>
+                                会员可见
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                陈皮
+                            </td>
+                            <td>
+                                统货
+                            </td>
+                            <td>
+                                赵**
+                            </td>
+                            <td>
+                                会员可见
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6">
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin:0px;border: 0px">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this"><button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger">政策解读</button></li>
+                            <li><button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger">疫情急报</button></li>
+                            <li><button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger">中药创新</button></li>
+                            <li><button class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger">辟谣科普</button></li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <table class="table table-hover" style="align-content: center;valign: middle" >
+                                    <tr>
+                                        <td>
+                                            2020年中央一号文件来了！一图了解→
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            中央一号文件聚焦“三农”补短板，力保全面小康收官
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            抓好“三农”领域重点工作 确保如期实现全面小康——中央农办主任、农业农村部部长韩长赋解读2020年中央一号文件
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        《药品注册管理办法》征求意见！临床批件可转让，审评、核查和检验大变化!
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="text-align: center">
+                            <nav>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                <div class="row jx">
+                    <img src="img/icon_5.jpg">
+                    <span>修合精选</span>
+                </div>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 3px">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/banner_2.jpg" alt="...">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner_2.jpg" alt="...">
+                            </div>
+                            <div class="item">
+                                <img src="img/banner_2.jpg" alt="...">
+                                <div class="carousel-caption">
+                                    修合中药在线平台专供
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row" style="padding: 5px">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="img/jingxun_1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="img/jingxuan_2.jpg.">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="img/jingxun_3.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <img src="img/jingxun_4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span>行业快讯</span>
+                <br>
+                <br>
+                <div class="layui-tab layui-tab-card" lay-filte="demo">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">简讯</li>
+                        <li>舆情监控</li>
+                        <li>价格变动</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <p>中医在疫情防控方面做出重大贡献！</p>
+                            <p>北京市药品监督管理局：2批次药品不符合规定</p>
+                            <p>玉林市场山黄皮商家零星购进行情没有波动</p>
+                            <p>因经常“上榜” 2家药企被药监局约谈</p>
+                            <p>安徽亳州十九里集镇市场知母少有商询问</p>
+                            <p>安徽亳州五马集镇牡丹皮行情微升</p>
+                            <p>安徽亳州十九里集镇市场紫菀尚未形成交易</p>
+                            <p>湖北省宜昌市五峰土家族自治县玄参暂无交易</p>
+                            <p>四川省泸州市古蔺县杜仲逐渐恢复交易</p>
+                            <p>……</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center">
+                        <nav>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/check.jpg" style="width: 270px;height: 270px">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="text-align: center">
+                <img src="img/gd.jpg" style="width: 1100px">
+            </div>
+        </div>
+    </div>
+    <!--3.页脚-->
+    <footer class="container-fluid" style="background-color:#F5F5F5">
+        <div class="row" style="margin-top: 5px">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">公司简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">产品服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">诚聘英才&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">法律声明&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">合作协商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1">网站介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+            <div class="col-md-1"> App下载</div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+        </div>
+        <di class="container bottom">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                    联系电话：188-9009-5920（工作日 9：00-17：30）  客服邮箱：kefu@xiuhe.com
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; border-top: 3px">
+                    网站备案号&nbsp;XXXXXXX&nbsp;号&nbsp;&nbsp;&nbsp;&nbsp;Corpyright &copy; 2020-20xx www.xiuhe.com 所有版权归修合中药材在线交易网所有
+                </div>
+            </div>
+        </di>
+    </footer>
+</body>
+</html>

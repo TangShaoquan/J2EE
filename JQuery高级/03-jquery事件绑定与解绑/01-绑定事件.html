@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            //1. 获取对象，绑定click事件
+            // $("#name").click(function () {
+            //     alert("我被点击了");
+            // });
+            //2. 给name绑定鼠标移动到元素之上的事件，绑定鼠标移出的事件
+            // $("#name").mouseover(function () {
+            //     alert("鼠标在上");
+            // });
+            // $("#name").mouseout(function () {
+            //     alert("鼠标走了");
+            // });
+            //2.2 简化操作，链式编程
+            // $("#name").mouseover(function () {
+            //     alert("鼠标在上");
+            // }).mouseout(function () {
+            //     alert("鼠标走了");
+            // });
+
+            //让文本输入框活得焦点
+            alert("我偏要活得焦点");
+            $("#name").focus();
+        });
+    </script>
+</head>
+<body>
+<input id="name" type="text" value="绑定点击事件">
+</body>
+</html>

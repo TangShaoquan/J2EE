@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            var citys = $("#city li");
+            //js遍历
+            // for (var i = 0; i < citys.length ; i++) {
+            //     alert(i+":"+citys[i].innerHTML);
+            // }
+
+            // //2. jq对象.each(callback);回调函数
+            // citys.each(function (index,element) {
+            //     //2.1 第一中方式获取li对象
+            //     // alert(this.innerHTML);//无法获取索引
+            //     //2.2 第二种获取li对象，在会带哦函数中定义参数 index（表示索引）和element元素对象
+            //     //alert(index+"："+element.innerHTML);
+            //     if("上海"==$(element).html()){
+            //         //不能用break,只有在js中才可以用break和continue
+            //         //在jq中，如果"上海"==$(element).html()返回true就相当于continue，反之则类似于break
+            //         // break;
+            //     }
+            //     alert(index+"："+$(element).html());
+            // });
+
+            // //3. $.each(object,[callback])
+            // $.each(citys,function () {
+            //     alert($(this).html());
+            // })
+
+            //4. for……of循环 jq3.0版本后才能使用
+            for(city of citys ){
+                alert($(city).html());
+            }
+        });
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>

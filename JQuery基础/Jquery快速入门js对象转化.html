@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq快速入门</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+        <div id="div1">div1……</div>
+        <div id="div2">div2……</div>
+        <div id="div3">div1……</div>
+        <div id="div4">div2……</div>
+
+
+
+        <script>
+            //可以把div当作数组使用
+            var divs = document.getElementsByName("div");
+            //传统方式便利div数组
+            alert(divs.length);
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].innerHTML="aaaa";
+            }
+
+            //可以把div当作数组使用
+            //通过jq获取素有div
+            var $div = $("div");
+            alert($div.length);
+            $div.html("ccc");
+        </script>
+
+
+
+
+
+
+</body>
+</html>

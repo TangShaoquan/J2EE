@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54185b55-0413-4d7d-9e89-ce8a9116f1d0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ZD3ZUunnWxwzF56CPtOSDGYyXy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\JQuery高级\js" />
+      <recent name="E:\Java\JQuery高级" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54185b55-0413-4d7d-9e89-ce8a9116f1d0" name="Default Changelist" comment="" />
+      <created>1584359892595</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584359892595</updated>
+      <workItem from="1584359895128" duration="5704000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="925" y="193" key="FileChooserDialogImpl" timestamp="1584359911475">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="925" y="193" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1584359911475" />
+    <state x="237" y="83" key="new project wizard" timestamp="1584373486432">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="237" y="83" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1584373486432" />
+  </component>
+</project>
