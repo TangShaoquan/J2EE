@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        window.onload=function () {
+            var img= document.getElementById("checkcode");
+            img.onclick = function () {
+                /*img.src = "/Response/CheckCodeServlet"*/;//没有用，这样是请求服务器的缓存
+                //设置一个参数，用不重复的时间戳来表示
+                let time = new Date().getTime();
+                img.src= "/Response/CheckCodeServlet?"+time;
+
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <img id="checkcode" src="/Response/CheckCodeServlet">
+    <a id="change" href="">看不清？换一张</a>
+</body>
+</html>

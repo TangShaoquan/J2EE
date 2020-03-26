@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="button" id="reload" value="刷新">
+    <script>
+        //reload方法，点击按钮，刷新页面
+        var btn = document.getElementById("reload");
+        btn.onclick = function () {
+            window.location.reload();
+        }
+        //获取href
+        window.alert(location.href);
+    </script>
+</body>
+</html>

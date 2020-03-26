@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script>
+        var number = 1;
+        function change(){
+            var img = document.getElementById("bg");
+            if(number > 3)
+                number = 1;
+            img.src = "img/banner_"+number+".jpg";
+            number++;
+        }
+        window.setInterval(change,1000);
+    </script>
+</head>
+<body>
+    <img id="bg" src="img/banner_1.jpg">;
+</body>
+</html>
