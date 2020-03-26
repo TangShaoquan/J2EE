@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AJax:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2462a5b-bc85-469b-8c96-1e71697cc187" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1ZDV7nROJQqXQKGmUIOzNSNUVYa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="my.test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="my.test" />
+      <recent name="my.Servlet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\AJax\web" />
+      <recent name="E:\Java\AJax\src\my\Servlet" />
+      <recent name="E:\Java\AJax\web\WEB-INF\lib" />
+      <recent name="E:\Java\AJax\web\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.31">
+    <configuration name="JacksonTest2.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AJax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="my.test" />
+      <option name="MAIN_CLASS_NAME" value="my.test.JacksonTest2" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JacksonTest2.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AJax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="my.test" />
+      <option name="MAIN_CLASS_NAME" value="my.test.JacksonTest2" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JacksonTest3.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AJax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="my.test" />
+      <option name="MAIN_CLASS_NAME" value="my.test.JacksonTest3" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JacksonTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AJax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="my.test" />
+      <option name="MAIN_CLASS_NAME" value="my.test.JacksonTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JacksonTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AJax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="my.test" />
+      <option name="MAIN_CLASS_NAME" value="my.test.JacksonTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/AJax/" />
+      <deployment>
+        <artifact name="AJax:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/AJax" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_31_AJax" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="3119" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="AJax:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.JacksonTest.test1" />
+      <item itemvalue="JUnit.JacksonTest2.test1" />
+      <item itemvalue="JUnit.JacksonTest.test2" />
+      <item itemvalue="JUnit.JacksonTest2.test2" />
+      <item itemvalue="JUnit.JacksonTest3.test3" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.31" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JacksonTest3.test3" />
+        <item itemvalue="JUnit.JacksonTest2.test2" />
+        <item itemvalue="JUnit.JacksonTest.test2" />
+        <item itemvalue="JUnit.JacksonTest2.test1" />
+        <item itemvalue="JUnit.JacksonTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2462a5b-bc85-469b-8c96-1e71697cc187" name="Default Changelist" comment="" />
+      <created>1584373486481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584373486481</updated>
+      <workItem from="1584373489356" duration="10490000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="447" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584381658941">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="447" y="93" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1584381658941" />
+    <state x="950" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1584378029683">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="950" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1584378029683" />
+    <state x="875" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584377199108">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="875" y="185" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1584377199108" />
+    <state width="740" height="223" key="GridCell.Tab.0.bottom" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="740" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="740" height="223" key="GridCell.Tab.0.center" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="740" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="740" height="223" key="GridCell.Tab.0.left" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="740" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="740" height="223" key="GridCell.Tab.0.right" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="740" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.1.bottom" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.1.center" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.1.left" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.1.right" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.2.bottom" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.2.center" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.2.left" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state width="485" height="281" key="GridCell.Tab.2.right" timestamp="1584384008572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="485" height="281" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1584384008572" />
+    <state x="861" y="336" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584377065674">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="861" y="336" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.864@0.0.1536.864" timestamp="1584377065674" />
+    <state x="-6" y="63" width="766" height="598" key="dock-window-1" timestamp="1584379887060">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-6" y="63" width="766" height="598" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1584379887060" />
+    <state x="-6" y="0" width="781" height="870" key="dock-window-2" timestamp="1584380300747">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-6" y="0" width="781" height="870" key="dock-window-2/0.0.1536.864@0.0.1536.864" timestamp="1584380300747" />
+    <state x="0" y="27" width="737" height="598" key="dock-window-3" timestamp="1584380524817">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="27" width="737" height="598" key="dock-window-3/0.0.1536.864@0.0.1536.864" timestamp="1584380524817" />
+    <state x="-22" y="141" width="737" height="574" key="dock-window-4" timestamp="1584383783388">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-22" y="141" width="737" height="574" key="dock-window-4/0.0.1536.864@0.0.1536.864" timestamp="1584383783388" />
+    <state x="739" y="52" width="737" height="535" key="dock-window-5" timestamp="1584383950457">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="739" y="52" width="737" height="535" key="dock-window-5/0.0.1536.864@0.0.1536.864" timestamp="1584383950457" />
+    <state x="472" y="185" key="search.everywhere.popup" timestamp="1584383978182">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="472" y="185" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1584383978182" />
+  </component>
+</project>

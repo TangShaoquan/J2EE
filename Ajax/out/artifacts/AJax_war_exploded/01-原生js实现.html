@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function fun() {
+            //1.创建核心对象
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            //建立链接
+            //true异步，false是同步
+            //GET方式请求参数在URL后面拼接
+            //POST方法请求参数在send方法拼接
+            xmlhttp.open("GET","/AJax/AjaxServlet?username=tom",true);
+
+            //发送请求
+            xmlhttp.send();
+
+            //接受并处理来自服务器的响应结果
+            xmlhttp.onreadystatechange=function () {
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    //获取服务器的响应结果
+                    var responseText = xmlhttp.responseText;
+                    alert(responseText);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="发送异步请求" onclick="fun()">
+</body>
+</html>

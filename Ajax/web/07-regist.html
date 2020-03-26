@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                //获取username的文本输入框
+                var text = $(this).val();
+                //发送请求
+                //期望服务器回复的格式：：{"userexits":true,"msg":"用户名太受欢迎，请更换一个"}
+                $.get("findServlet",{username:text},function (data) {
+                    alert(data.msg);
+                    var span = $("#s_username");
+                        if(data.userexits){
+                            span.css("color","red");
+                            span.html(data.msg);
+                        }else {
+                            span.css("color","green");
+                            span.html(data.msg);
+                        }
+                    },"json");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text"  id="username" name="username" placeholder="填写用户名">
+        <span id="s_username"></span>
+        <br>
+        <input type="password" name="password" placeholder="填写密码"><br>
+        <input type="button" value="注册">
+    </form>
+</body>
+</html>
